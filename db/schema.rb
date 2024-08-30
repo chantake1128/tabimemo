@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_30_074515) do
 
   create_table "landmarks", charset: "utf8", force: :cascade do |t|
     t.integer "prefecture_id", null: false
-    t.integer "city_id", null: false
+    t.string "city", null: false
     t.string "street_address", null: false
     t.string "building_name"
     t.datetime "created_at", null: false
