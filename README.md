@@ -5,6 +5,7 @@
 |--------------------|---------------------|--------------------------------|
 | nickname           | string              | nill: false                    |
 | email              | string              | nill: false, unique: true      |
+
 | phone_number       | integer             | nill: false, unique: true      |
 | birth_day          | date                | nill: false                    |
 
