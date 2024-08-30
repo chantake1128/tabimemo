@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
     create_table :users do |t|
       t.string  :nickname,           nill: false
       t.string  :email,              nill: false, unique: true
-      t.string  :encrypted_password, null: false, default: ""
+      t.string  :encrypted_password, null: false,
       t.integer :phone_number,       nill: false, unique: true
       t.date    :birth_day,          nill: false
       t.timestamps
