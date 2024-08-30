@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+.top-page-header {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+}
+
+.top-icon {
+  font-size: 50px;
+  text-decoration: none;
+  color: black;
+}
+
+.lists {
+  display: flex;
+
+}
+
+.user-nickname {
+  text-decoration: none;
+  color: black;
+  margin-right: 3vw;
+}
+
+.logout {
+  text-decoration: none;
+  color: black;
+}
+
+.login {
+  text-decoration: none;
+  color: black;
+  margin-right: 3vw;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: black;
+}
