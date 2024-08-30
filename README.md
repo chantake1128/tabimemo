@@ -5,6 +5,7 @@
 |--------------------|---------------------|--------------------------------|
 | nickname           | string              | nill: false                    |
 | email              | string              | nill: false, unique: true      |
+| encrypted_password | string              | nill: false, unique: true      |
 | phone_number       | integer             | nill: false, unique: true      |
 | birth_day          | date                | nill: false                    |
 
@@ -57,7 +58,7 @@
 
 | Column             | Type                | Options                        |
 |--------------------|---------------------|--------------------------------|
-| prefecture_id      | integer             | null: false, unique: true      |
+| prefecture_id      | integer             | null: false                    |
 | city_id            | integer             | null: false                    |
 | street_address     | string              | null: false                    |
 | building_name      | string              |                                |
