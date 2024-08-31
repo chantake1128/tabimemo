@@ -1,1 +1,30 @@
 <%= render "shared/header" %>
+<h1>Posts一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th>Score</th>
+      <th>User</th>
+      <th>Landmark</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.body %></td>
+        <td><%= post.category_id %></td>
+        <td><%= post.status_id %></td>
+        <td><%= post.score_id %></td>
+        <td><%= post.user.nickname %></td>
+        <td><%= post.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

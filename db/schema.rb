@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_30_074515) do
+ActiveRecord::Schema[7.0].define(version: 2024_08_30_074456) do
   create_table "comments", charset: "utf8", force: :cascade do |t|
-    t.text "text"
-    t.bigint "user_id"
-    t.bigint "post_id"
+    t.text "text", null: false
+    t.bigint "user_id", null: false
+    t.bigint "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
@@ -22,8 +22,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_30_074515) do
   end
 
   create_table "landmarks", charset: "utf8", force: :cascade do |t|
+    t.string "name", null: false
     t.integer "prefecture_id", null: false
-    t.integer "city_id", null: false
+    t.string "city", null: false
     t.string "street_address", null: false
     t.string "building_name"
     t.datetime "created_at", null: false
@@ -31,22 +32,36 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_30_074515) do
   end
 
   create_table "posts", charset: "utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "body", null: false
+    t.integer "category_id", null: false
+    t.integer "status_id", null: false
+    t.integer "score_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "landmark_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["landmark_id"], name: "index_posts_on_landmark_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "nickname", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.integer "phone_number", null: false
+    t.date "birth_day", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
+  add_foreign_key "posts", "landmarks"
+  add_foreign_key "posts", "users"
 end
