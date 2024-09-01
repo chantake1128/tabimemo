@@ -25,333 +25,242 @@
   background-color: aqua;
 }
 
-
-
-.hokkaidou {
-  background-image: url('hokkaidou.png');
+.common-style {
   background-size:contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.hokkaidou {
+  background-image: url('hokkaidou.png');
 }
 
 .aomori {
   background-image: url('aomori.png');
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
 .iwate {
   background-image: url('iwate.png');
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
 .akita {
   background-image: url('akita.png');
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
 .miyagi {
   background-image: url('miyagi.png');
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
 .yamagata {
   background-image: url('yamagata.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .hukusima {
   background-image: url('hukusima.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .ibaraki {
   background-image: url('ibaraki.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .totigi {
   background-image: url('totigi.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .gunma {
   background-image: url('gunma.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .saitama {
   background-image: url('saitama.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .tiba {
   background-image: url('tiba.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .toukyou {
   background-image: url('tokyo.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .kanagawa {
   background-image: url('kanagawa.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .niigata {
   background-image: url('niigata.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .toyama {
   background-image: url('toyama.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .isikawa {
   background-image: url('isikawa.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .hukui {
   background-image: url('hukui.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .yamanasi {
   background-image: url('yamanasi.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .nagano {
   background-image: url('nagano.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .gihu {
   background-image: url('gihu.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .sizuoka {
   background-image: url('sizuoka.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .aiti {
   background-image: url('aiti.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .mie {
   background-image: url('mie.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .siga {
   background-image: url('siga.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .kyouto {
   background-image: url('kyouto.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .oosaka {
   background-image: url('oosaka.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .hyougo {
   background-image: url('hyougo.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .nara {
   background-image: url('nara.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .wakayama {
   background-image: url('wakayama.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .okayama {
   background-image: url('okayama.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .hirosima {
   background-image: url('hirosima.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .yamaguti {
   background-image: url('yamaguti.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .simane {
   background-image: url('simane.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .tottori {
   background-image: url('tottori.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .kagawa {
   background-image: url('kagawa.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .ehime {
   background-image: url('ehime.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .kouti {
   background-image: url('kouti.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .tokusima {
   background-image: url('tokusima.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .hukuoka {
   background-image: url('hukuoka.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .ooita {
   background-image: url('ooita.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .saga {
   background-image: url('saga.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .nagasaki {
   background-image: url('nagasaki.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .miyazaki {
   background-image: url('miyazaki.png');
-    background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  
 }
 
 .kagosima {
   background-image: url('kagosima.png');
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
 .kumamoto {
   background-image: url('kumamoto.png');
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
 .okinawa {
   background-image: url('okinawa.png');
-  background-size:contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
