@@ -6,9 +6,9 @@
   display: flex;
   justify-content: center;
 }
-
+/*form-wrapはログイン時にも使用しています*/
 .form-wrap {
-  width: 5  100%;
+  width: 100%;
   background-color: white;
   padding-bottom: 70px;
 }
