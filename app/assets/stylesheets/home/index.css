@@ -1,0 +1,266 @@
+.prefecture_lists {
+  display: flex;
+  flex-wrap:  wrap;
+}
+
+.region {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 100vw;
+  margin-top: 3vw;
+}
+.prefecture {
+  height: 100px;
+  width: 200px;
+
+  font-size: 25px;
+  border-radius: 10px;
+  margin: 3vw;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+
+.common-style {
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hokkaidou {
+  background-image: url('hokkaidou.png');
+}
+
+.aomori {
+  background-image: url('aomori.png');
+
+}
+
+.iwate {
+  background-image: url('iwate.png');
+
+}
+
+.akita {
+  background-image: url('akita.png');
+
+}
+
+.miyagi {
+  background-image: url('miyagi.png');
+
+}
+
+.yamagata {
+  background-image: url('yamagata.png');
+  
+}
+
+.hukusima {
+  background-image: url('hukusima.png');
+  
+}
+
+.ibaraki {
+  background-image: url('ibaraki.png');
+  
+}
+
+.totigi {
+  background-image: url('totigi.png');
+  
+}
+
+.gunma {
+  background-image: url('gunma.png');
+  
+}
+
+.saitama {
+  background-image: url('saitama.png');
+  
+}
+
+.tiba {
+  background-image: url('tiba.png');
+  
+}
+
+.toukyou {
+  background-image: url('tokyo.png');
+  
+}
+
+.kanagawa {
+  background-image: url('kanagawa.png');
+  
+}
+
+.niigata {
+  background-image: url('niigata.png');
+  
+}
+
+.toyama {
+  background-image: url('toyama.png');
+  
+}
+
+.isikawa {
+  background-image: url('isikawa.png');
+  
+}
+
+.hukui {
+  background-image: url('hukui.png');
+  
+}
+
+.yamanasi {
+  background-image: url('yamanasi.png');
+  
+}
+
+.nagano {
+  background-image: url('nagano.png');
+  
+}
+
+.gihu {
+  background-image: url('gihu.png');
+  
+}
+
+.sizuoka {
+  background-image: url('sizuoka.png');
+  
+}
+
+.aiti {
+  background-image: url('aiti.png');
+  
+}
+
+.mie {
+  background-image: url('mie.png');
+  
+}
+
+.siga {
+  background-image: url('siga.png');
+  
+}
+
+.kyouto {
+  background-image: url('kyouto.png');
+  
+}
+
+.oosaka {
+  background-image: url('oosaka.png');
+  
+}
+
+.hyougo {
+  background-image: url('hyougo.png');
+  
+}
+
+.nara {
+  background-image: url('nara.png');
+  
+}
+
+.wakayama {
+  background-image: url('wakayama.png');
+  
+}
+
+.okayama {
+  background-image: url('okayama.png');
+  
+}
+
+.hirosima {
+  background-image: url('hirosima.png');
+  
+}
+
+.yamaguti {
+  background-image: url('yamaguti.png');
+  
+}
+
+.simane {
+  background-image: url('simane.png');
+  
+}
+
+.tottori {
+  background-image: url('tottori.png');
+  
+}
+
+.kagawa {
+  background-image: url('kagawa.png');
+  
+}
+
+.ehime {
+  background-image: url('ehime.png');
+  
+}
+
+.kouti {
+  background-image: url('kouti.png');
+  
+}
+
+.tokusima {
+  background-image: url('tokusima.png');
+  
+}
+
+.hukuoka {
+  background-image: url('hukuoka.png');
+  
+}
+
+.ooita {
+  background-image: url('ooita.png');
+  
+}
+
+.saga {
+  background-image: url('saga.png');
+  
+}
+
+.nagasaki {
+  background-image: url('nagasaki.png');
+  
+}
+
+.miyazaki {
+  background-image: url('miyazaki.png');
+  
+}
+
+.kagosima {
+  background-image: url('kagosima.png');
+
+}
+
+.kumamoto {
+  background-image: url('kumamoto.png');
+
+}
+
+.okinawa {
+  background-image: url('okinawa.png');
+
+}

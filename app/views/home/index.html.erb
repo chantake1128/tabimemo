@@ -60,7 +60,7 @@
   <h2 class="region"><%= region[:name] %></h2>
   <ul class="prefecture_lists">
     <% region[:prefectures].each do |prefecture| %>
-      <%= link_to "posts", class: "prefecture #{prefecture[:class]}" do %>
+      <%= link_to "posts", class: "prefecture #{prefecture[:class]} common-style" do %>
         <li><%= prefecture[:name] %></li>
       <% end %>
     <% end %>
