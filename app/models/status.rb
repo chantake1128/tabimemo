@@ -5,7 +5,8 @@ class Status < ActiveHash::Base
     { id: 3, name: '友達と' }, 
     { id: 4, name: '恋人と' },
     { id: 5, name: '家族と' }, 
-    { id: 6, name: 'その他' }
+    { id: 6, name: '子連れ' },
+    { id: 7, name: 'その他' }
 
   ]
   include ActiveHash::Associations
