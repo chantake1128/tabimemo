@@ -1,1 +1,65 @@
-<%= render "shared/header" %>
+<%= render "shared/second-header" %>
+<div class="posts-main">
+  <h2 class="posts-title">旅行情報登録</h2>
+  <%= form_with model: @post, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <%# 画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        商品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"post-image" %>
+      </div>
+    </div>
+    <%# /画像 %>
+    <div class="weight-bold-text">
+      どこへ
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:landmark_id, @landmarks, :id, :name, {}, {class:"select-box", id:"post-landmark"}) %>
+    <div class="weight-bold-text">
+      誰と
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"select-box", id:"post-status"}) %>
+    <div class="weight-bold-text">
+      カテゴリー
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"post-category"}) %>
+    <div class="weight-bold-text">
+      おすすめ度
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:score_id, Score.all, :id, :name, {}, {class:"select-box", id:"post-score"}) %>
+    <%# 主題と内容 %>
+    <div class="new-posts">
+      <div class="weight-bold-text">
+        タイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"posts-text", id:"post-name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
+      <div class="posts-explain">
+        <div class="weight-bold-text">
+          内容
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :body, class:"posts-text", id:"post-info", placeholder:"例）北海道の函館山に行きました。夜の夜景を見るためにロープウェイに乗りました。そこから見る景色は最高でした！" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /主題と内容 %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%=link_to 'もどる', '/posts', class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  <% end %>
+</div>
