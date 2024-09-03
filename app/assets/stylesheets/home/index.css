@@ -8,12 +8,11 @@
   font-weight: bold;
   text-align: center;
   width: 100vw;
-  margin-top: 3vw;
+  padding-top: 100px;
 }
 .prefecture {
   height: 100px;
   width: 200px;
-
   font-size: 25px;
   border-radius: 10px;
   margin: 3vw;

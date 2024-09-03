@@ -1,0 +1,83 @@
+.top-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+.main-body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+/**左側（旅行情報）**/
+.left-body {
+  width: 50%;
+  margin: 10px 10px;
+}
+
+.post-top-title {
+  text-align: center;
+  font-size: 25px;
+}
+
+.post {
+  background-color: yellow;
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+/**上半分（主題＋写真）**/
+.post-top {
+  display: flex;
+  height: 100px;
+  width: 100%;
+}
+
+.post-img-content {
+  height: 100%;
+  width: 100px;
+}
+
+.post-img {
+  object-fit: cover; 
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 0 0 0;
+}
+
+.post-content {
+  background-color: red;
+  height: 100px;
+  width: 1000px;
+  border-radius: 0 10px 0 0;
+}
+
+.post-content-top {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.post-category, .post-status, .post-score {
+  font-size: 15px;
+}
+
+.post-title {
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.post-content-info-sub {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/**右側（旅のしおり）**/
+.right-body {
+  background-color: green;
+  width: 100%;
+  height: 100px;
+}

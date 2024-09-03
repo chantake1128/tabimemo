@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
 }
-/*form-wrapはログイン時にも使用しています*/
+/* ログイン時にも使用しています*/
 .form-wrap {
   width: 100%;
   background-color: white;
@@ -59,7 +59,7 @@
   font-size: 16px;
   resize: none;
 }
-
+/* \ログイン時にも使用しています*/
 .info-text {
   color: #888;
   font-size: 15px;
