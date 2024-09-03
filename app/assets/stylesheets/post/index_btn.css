@@ -1,0 +1,60 @@
+/**情報登録ボタン**/
+.new-btn {
+  height: 120px;
+  width: 120px;
+  background: #FFFFFF;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+.new-btn-text {
+  color: black;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  position: fixed;
+  bottom: 30px;
+  right: 55px;
+}
+
+.new-btn-icon {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+}
+/**旅のしおり(旅行計画)**/
+.plan-btn {
+  height: 120px;
+  width: 120px;
+  background: #FFFFFF;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 172px;
+  position: fixed;
+  padding: 15px;
+}
+.plan-btn-text {
+  color: black;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  position: fixed;
+  bottom: 30px;
+  right: 185px;
+}
+
+.plan-btn-icon {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 85px;
+  right: 200px;
+}
