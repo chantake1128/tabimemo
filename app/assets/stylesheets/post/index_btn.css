@@ -1,4 +1,34 @@
-/**情報登録ボタン**/
+/**観光地登録ボタン**/
+.landmark-btn {
+  height: 120px;
+  width: 120px;
+  background: #FFFFFF;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 312px;
+  position: fixed;
+  padding: 15px;
+}
+.landmark-btn-text {
+  color: black;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  position: fixed;
+  bottom: 30px;
+  right: 345px;
+}
+
+.landmark-btn-icon {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  bottom: 60px;
+  right: 320px;
+}
+/**情報投稿ボタン**/
 .new-btn {
   height: 120px;
   width: 120px;

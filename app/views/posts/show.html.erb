@@ -4,7 +4,7 @@
   <div class="post-box">
     <div class="post-img-content">
       <% if @post.image.present? %>
-        <%= image_tag post.image, class: "post-img" %>
+        <%= image_tag @post.image, class: "post-img" %>
         <% else %>
         <%= image_tag'sample.png', class: "post-img" %>
        <% end %>
@@ -17,5 +17,7 @@
     <%= link_to "/posts", class: "back-btn" do %>
       <div>戻る</div>
     <% end %>
+    <%= link_to "編集する", edit_post_path(@post), class: "post-red-btn" %>
+    <%= link_to "削除", post_path(@post), data: { turbo_method: :delete }, class: "post-destroy" %>
   </div>
 </div>

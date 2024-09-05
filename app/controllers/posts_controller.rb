@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :show, :edit]
-  before_action :set_post, only:[:show]
+  before_action :set_post, only:[:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :correct_user, only:[:edit, :update, :destroy]
+
   def index
       landmark_ids = Landmark.where(prefecture_id: params[:prefecture_id]).pluck(:id)
       @posts = Post.includes(:landmark).where(landmark_id: landmark_ids)
@@ -31,7 +33,23 @@ class PostsController < ApplicationController
 
   def show
   end
+
+  def edit
+  end
   
+  def update
+    if @post.update(post_params)
+      redirect_to post_path(@post)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to root_path
+  end
+
   private
 
   def set_post
@@ -40,6 +58,13 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:image, :title, :body,:status_id, :category_id, :score_id, :landmark_id, :user_id)
+  end
+
+  def correct_user
+    @post = Post.find(params[:id])
+    unless @post.user == current_user
+      redirect_to root_path
+    end
   end
 
 end
