@@ -12,6 +12,7 @@
 ### Association
 - has_many :posts
 - has_many :comments
+- has_many :landmarks
 
 <!-------------------------------投稿情報-------------------------------------->
 ## postsテーブル
@@ -70,4 +71,5 @@
   belongs_to_active_hash :city
 
 # その他の関連付け
-- has_one :post
+- has_one    :post
+- belongs_to :user

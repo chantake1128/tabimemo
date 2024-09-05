@@ -1,0 +1,55 @@
+<%= render "shared/second-header" %>
+<div class="landmarks-main">
+  <h2 class="landmarks-title">観光地登録</h2>
+  <%= form_with model: @landmark, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <%# 画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        商品画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"landmark-image" %>
+      </div>
+    </div>
+    <%# /画像 %>
+        <div class="weight-bold-text">
+      観光地名
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :name, class:"landmarks-text", id:"landmark-name", placeholder:"例）函館山", maxlength:"100" %>
+
+    <div class="weight-bold-text">
+      都道府県
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"landmark-prefecture"}) %>
+
+    <div class="weight-bold-text">
+      市区町村
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :city, class:"landmarks-text", id:"landmark-name", placeholder:"例）札幌市", maxlength:"20" %>
+
+    <div class="weight-bold-text">
+      それ以降の住所
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :street_address, class:"landmarks-text", id:"landmark-name", placeholder:"例）1-2-3", maxlength:"20" %>
+
+    <div class="weight-bold-text">
+      ビル名
+    </div>
+    <%= f.text_area :building_name, class:"landmarks-text", id:"landmark-name", placeholder:"例）テストビル123", maxlength:"20" %>
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"landmark-btn" %>
+      <%=link_to 'もどる', '/', class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  <% end %>
+</div>
