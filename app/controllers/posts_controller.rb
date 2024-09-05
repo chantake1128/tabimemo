@@ -35,6 +35,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @landmarks = Landmark.all
   end
   
   def update
