@@ -36,6 +36,9 @@
               <div class="post-created-at"><%= post.created_at %></div>
             </div>
           </div>
+          <div id="like-btn<%= post.id %>">
+            <%= render partial: "shared/like", locals: { post: post } %>
+          </div>
         </div>
         <% end %>
       <% end %>
