@@ -5,11 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :posts
+  has_many :likes
 
   validates :nickname,     presence: true
   validates :birth_day,    presence: true
-  validate :validate_password_format, if: -> { password.present? }
-  validate :valid_phone_number
+  validate  :validate_password_format, if: -> { password.present? }
+  validate  :valid_phone_number
 
   private
 
