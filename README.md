@@ -74,6 +74,7 @@ https://tabimemo.onrender.com
 ・JavaScript
 
 ## バックエンド
+・Ruby(3.2.0)
 ・Ruby on Rail(7.0.0)
 
 # ローカルでの動作方法
@@ -93,11 +94,11 @@ https://tabimemo.onrender.com
 
 | Column             | Type                | Options                        |
 |--------------------|---------------------|--------------------------------|
-| nickname           | string              | nill: false                    |
-| email              | string              | nill: false, unique: true      |
-| encrypted_password | string              | nill: false, unique: true      |
-| phone_number       | integer             | nill: false, unique: true      |
-| birth_day          | date                | nill: false                    |
+| nickname           | string              | null: false                    |
+| email              | string              | null: false, unique: true      |
+| encrypted_password | string              | null: false, unique: true      |
+| phone_number       | integer             | null: false, unique: true      |
+| birth_day          | date                | null: false                    |
 
 ### Association
 - has_many :posts
@@ -109,11 +110,11 @@ https://tabimemo.onrender.com
 
 | Column             | Type                | Options                        |
 |--------------------|---------------------|--------------------------------|
-| title              | string              | nill: false                    |
-| body               | text                | nill: false                    |
-| category_id        | integer             | nill: false                    |
-| status_id          | integer             | nill: false                    |
-| score_id           | integer             | nill: false                    |
+| title              | string              | null: false                    |
+| body               | text                | null: false                    |
+| category_id        | integer             | null: false                    |
+| status_id          | integer             | null: false                    |
+| score_id           | integer             | null: false                    |
 | user               | references          | null: false, foreign_key:true  |
 | landmark           | references          | null: false, foreign_key:true  |
 
@@ -135,7 +136,7 @@ https://tabimemo.onrender.com
 
 | Column             | Type                | Options                        |
 |--------------------|---------------------|--------------------------------|
-| text               | text                | nill: false                    |
+| text               | text                | null: false                    |
 | user               | references          | null: false, foreign_key:true  |
 | post               | references          | null: false, foreign_key:true  |
 
@@ -150,7 +151,7 @@ https://tabimemo.onrender.com
 | Column             | Type                | Options                        |
 |--------------------|---------------------|--------------------------------|
 | prefecture_id      | integer             | null: false                    |
-| city               | string                 | null: false                    |
+| city               | string              | null: false                    |
 | street_address     | string              | null: false                    |
 | building_name      | string              |                                |
 
@@ -163,3 +164,40 @@ https://tabimemo.onrender.com
 # その他の関連付け
 - has_one    :post
 - belongs_to :user
+
+<!--------------------------------旅行計画（全体）-------------------------------------->
+## tripsテーブル
+| Column             | Type                | Options                        |
+|--------------------|---------------------|--------------------------------|
+| travel-name        | string              | null: false                    |
+| start-date         | date                | null: false                    |
+| end-date           | date                | null: false                    |
+
+### Association
+- belongs_to :user
+- has_many   :schedules
+
+<!--------------------------------スケジュール（日程）----------------------------------->
+## schedulesテーブル
+| Column             | Type                | Options                        |
+|--------------------|---------------------|--------------------------------|
+| date               | date                | null: false                    |
+| trip               | references          | null: false, foreign_key:true  |
+
+### Association
+- belongs_to :trip
+- has_many   :activities
+
+
+<!--------------------------------アクティビティー（時間）------------------------------->
+# activitiesテーブル
+| Column             | Type                | Options                        |
+|--------------------|---------------------|--------------------------------|
+| start-time         | integer             | null: false                    |
+| end-time           | integer             | null: false                    |
+| location           | string              | null: false                    |
+| description        | string              | null: false                    |
+| schedule           | references          | null: false, foreign_key:true  |
+
+### Association
+- belongs_to :schedule
