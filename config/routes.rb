@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
   resources :landmarks, only: [:new, :create]
+  resources :travels,   only: [:new, :create, :edit, :update, :destroy]
 end
