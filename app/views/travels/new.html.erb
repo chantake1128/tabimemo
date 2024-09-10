@@ -1,0 +1,65 @@
+<%= render "shared/second-header" %>
+<%= form_with model: @travel_form, url: travels_path, local: true do |f| %>
+  <div class='form-text-wrap'>
+    <label class="form-text">旅行名</label><span class="indispensable">必須</span>
+  </div>
+  <div class="field">
+    <%= f.text_field :travel_name, id:"travel-code", placeholder:"題名", maxlength:"100" %>
+  </div>
+
+  <div class='form-text-wrap'>
+    <label class="form-text">出発日</label><span class="indispensable">必須</span>
+  </div>
+  <div class="field">
+    <%= f.text_field :start_date, id:"travel-code", placeholder:"出発日" %>
+  </div>
+
+  <div class='form-text-wrap'>
+    <label class="form-text">帰宅日</label><span class="indispensable">必須</span>
+  </div>
+  <div class="field">
+    <%= f.text_field :end_date, id:"travel-code", placeholder:"帰宅日" %>
+  </div>
+  <div id="form-segment">
+    <div class='form-text-wrap'>
+      <label class="form-text">日にち</label><span class="indispensable">必須</span>
+    </div>
+    <div class="field">
+      <%= f.text_field :start_date, id:"travel-code", placeholder:"日にち" %>日
+    </div>
+
+    <div class='form-text-wrap'>
+      <label class="form-text">開始時間</label><span class="indispensable">必須</span>
+    </div>
+    <div class="field">
+      <%= f.text_field :start_time, id:"travel-code", placeholder:"10:00" %>
+    </div>
+
+    <div class='form-text-wrap'>
+      <label class="form-text">終了時間</label><span class="indispensable">必須</span>
+    </div>
+    <div class="field">
+      <%= f.text_field :end_time, id:"travel-code", placeholder:"11:00" %>
+    </div>
+
+    <div class='form-text-wrap'>
+      <label class="form-text">場所</label><span class="indispensable">必須</span>
+    </div>
+    <div class="field">
+      <%= f.text_field :location, id:"travel-code", placeholder:"厳島神社" %>
+    </div>
+
+    <div class='form-text-wrap'>
+      <label class="form-text">やること</label>
+    </div>
+    <div class="field">
+      <%= f.text_field :description, id:"travel-code", placeholder:"お参りをする" %>
+    </div>
+  </div>
+  <div>
+    <button type="button" id="duplicate-button">複製する</button>
+  </div>
+  <div class='keep-btn'>
+    <%= f.submit "保存する" ,class:"keep-red-btn", id:"button" %>
+  </div>
+<% end %>
