@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_07_175924) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_09_083559) do
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -43,9 +43,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_07_175924) do
     t.integer "start_time", null: false
     t.integer "end_time", null: false
     t.string "location", null: false
-    t.string "description", null: false
+    t.string "description"
+    t.bigint "trip_id", null: false
+    t.bigint "schedule_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["schedule_id"], name: "index_activities_on_schedule_id"
+    t.index ["trip_id"], name: "index_activities_on_trip_id"
   end
 
   create_table "comments", charset: "utf8", force: :cascade do |t|
@@ -95,14 +99,23 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_07_175924) do
     t.date "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "trip_id", null: false
+    t.index ["trip_id"], name: "index_schedules_on_trip_id"
+  end
+
+  create_table "travels", charset: "utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "trips", charset: "utf8", force: :cascade do |t|
     t.string "travel_name", null: false
     t.date "start_date", null: false
     t.date "end_date", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_trips_on_user_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
@@ -122,10 +135,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_07_175924) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "activities", "schedules"
+  add_foreign_key "activities", "trips"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users"
   add_foreign_key "posts", "landmarks"
   add_foreign_key "posts", "users"
+  add_foreign_key "schedules", "trips"
+  add_foreign_key "trips", "users"
 end

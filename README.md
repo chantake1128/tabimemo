@@ -170,8 +170,10 @@ https://tabimemo.onrender.com
 | Column             | Type                | Options                        |
 |--------------------|---------------------|--------------------------------|
 | travel-name        | string              | null: false                    |
+| prefecture_id      | integer             | null: false                    |
 | start-date         | date                | null: false                    |
 | end-date           | date                | null: false                    |
+| user               | references          | null: false, foreign_key:true  |
 
 ### Association
 - belongs_to :user
@@ -196,7 +198,7 @@ https://tabimemo.onrender.com
 | start-time         | integer             | null: false                    |
 | end-time           | integer             | null: false                    |
 | location           | string              | null: false                    |
-| description        | string              | null: false                    |
+| description        | string              |                                |
 | schedule           | references          | null: false, foreign_key:true  |
 
 ### Association

@@ -51,8 +51,8 @@
     <span class='landmark-btn-text'>観光地<br>登録</span>
     <%= image_tag 'travel.png' , size: '185x50' ,class: "landmark-btn-icon" %>
   <% end %>
-  <%= link_to("/", class: 'plan-btn') do %>
-    <span class='plan-btn-text'>旅のしおり<br>投稿</span>
+  <%= link_to(new_travel_path, class: 'plan-btn') do %>
+    <span class='plan-btn-text'>旅のしおり<br>作成</span>
     <%= image_tag 'plan.png' , size: '185x50' ,class: "plan-btn-icon" %>
   <% end %>
   <%= link_to(new_post_path, class: 'new-btn') do %>
