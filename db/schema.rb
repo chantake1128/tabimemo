@@ -110,6 +110,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_09_083559) do
 
   create_table "trips", charset: "utf8", force: :cascade do |t|
     t.string "travel_name", null: false
+    t.integer "prefecture_id", null: false
     t.date "start_date", null: false
     t.date "end_date", null: false
     t.bigint "user_id", null: false

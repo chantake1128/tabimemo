@@ -6,6 +6,7 @@ class User < ApplicationRecord
   
   has_many :posts
   has_many :likes
+  has_many :trips
 
   validates :nickname,     presence: true
   validates :birth_day,    presence: true
