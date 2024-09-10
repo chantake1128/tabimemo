@@ -44,7 +44,17 @@
       <% end %>
     </div>
     <div class="right-body">
-        aitia
+      <div class="post-top-title">旅のしおり</div>
+      <% if @trips.any? %>
+        <% @trips.each do |trip| %>
+        <div class="travel-plan">
+          <p>旅行名：<%= trip.travel_name %></p>
+          <p><%= trip.start_date.strftime("%-m月%-d日") %>～<%= trip.end_date.strftime("%-m月%-d日") %></p>
+        </div>
+        <% end %>
+      <% else %>
+        <p>No trips found for the selected prefecture_id.</p>
+      <% end %>
     </div>
   </div>
   <%= link_to(new_landmark_path, class: 'landmark-btn') do %>

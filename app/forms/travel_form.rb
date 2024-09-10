@@ -16,24 +16,24 @@ class TravelForm
     return false unless valid?
 
     ActiveRecord::Base.transaction do
-      trip = Trip.create!(
+      @trip = Trip.create!(
         travel_name: travel_name,
         prefecture_id: prefecture_id,
         start_date: start_date,
         end_date: end_date,
         user_id: user_id
       )
-      schedule = Schedule.create!(
+      @schedule = Schedule.create!(
         date: date,
-        trip_id: trip.id
+        trip_id: @trip.id
       )
-      activitie = Activitie.create!(
+      @activitie = Activitie.create!(
         start_time: start_time,
         end_time: end_time,
         location: location,
         description: description,
-        trip_id: trip.id,
-        schedule_id: schedule.id
+        trip_id: @trip.id,
+        schedule_id: @schedule.id
       )
     end
     true

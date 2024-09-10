@@ -1,1 +1,16 @@
 <%= render "shared/header" %>
+
+<div class="travel-show">
+  <div class="travel-box">
+    <div class="travel-box-title">    <%= @travel.title %></div>
+    <div class="travel-box-body">     <%= @travel.body %></div>
+    <div class="travel-box-status">   <%= Status.find(@travel.status_id).name %></div>
+    <div class="travel-box-category"> <%= Category.find(@travel.category_id).name %></div>
+    <div class="travel-box-score">    <%= Score.find(@travel.score_id).name %></div>
+    <%= link_to "/travels", class: "back-btn" do %>
+      <div>戻る</div>
+    <% end %>
+    <%= link_to "編集する", edit_travel_path(@travel), class: "travel-red-btn" %>
+    <%= link_to "削除", travel_path(@travel), data: { turbo_method: :delete }, class: "travel-destroy" %>
+  </div>
+</div>
