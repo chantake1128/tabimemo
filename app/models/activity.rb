@@ -1,4 +1,4 @@
-class Activitie < ApplicationRecord
+class Activity < ApplicationRecord
   belongs_to :schedule
 
   validates :start_time,  presence: true

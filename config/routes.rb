@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
   resources :landmarks, only: [:new, :create]
   resources :travels,   only: [:new, :create, :edit, :update, :destroy]
+  resources :users,      only: :show
 end
