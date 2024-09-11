@@ -12,8 +12,8 @@
     <div class="post-box-title">    <%= @post.title %></div>
     <div class="post-box-body">     <%= @post.body %></div>
     <div class="post-box-status">   <%= Status.find(@post.status_id).name %></div>
-    <div class="post-box-category"> <%= Category.find(@post.category_id).name %></div>
-    <div class="post-box-score">    <%= Score.find(@post.score_id).name %></div>
+    <div class="post-box-category"> カテゴリー：<%= Category.find(@post.category_id).name %></div>
+    <div class="post-box-score">    おすすめ度：<%= Score.find(@post.score_id).name %></div>
     <%= link_to "/posts", class: "back-btn" do %>
       <div>戻る</div>
     <% end %>
