@@ -17,22 +17,25 @@ a {
 
 /**左側（旅行情報）**/
 .left-body {
-  width: 50%;
-  margin: 10px 10px;
+  width: 50VW;
+  background-color: lightgray;
 }
 
 .post-top-title {
   text-align: center;
   font-size: 25px;
+  background-color: aquamarine;
+  border: 1px solid black;
 }
 
 .post {
-  background-color: yellow;
+  background-color: white;
   height: 200px;
-  width: 100%;
+  width: 45vw;
   border-radius: 10px;
-  margin-top: 10px;
+  margin: 10px auto 5px auto;
   cursor: pointer;
+  overflow: hidden;
 }
 /**上半分（主題＋写真）**/
 .post-top {
@@ -43,20 +46,20 @@ a {
 
 .post-img-content {
   height: 100%;
-  width: 400px;
+  width: 100px;
+  flex-shrink: 0;
 }
 
 .post-img {
   object-fit: cover; 
   height: 100%;
   width: 100%;
-  border-radius: 10px 0 0 0;
+  border-radius: 10px;
 }
 
 .post-content {
-  background-color: red;
   height: 100px;
-  width: 1000px;
+  width: 100%;
   border-radius: 0 10px 0 0;
 }
 
@@ -74,6 +77,15 @@ a {
   line-height: 50px;
   font-size: 20px;
   font-weight: bold;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.post-body {
+  font-weight: bold;
+  overflow-x: auto;
+  height: 50px;
+  max-height: 50px;  
 }
 
 .post-content-info-sub {
@@ -82,13 +94,16 @@ a {
 }
 
 .post-user-nickname {
-  margin-right: 10px;
+  margin-right: 20px;
+}
+
+.post-created-at {
+  float: right;
 }
 
 /**右側（旅のしおり）**/
 .right-body {
   background-color: green;
-  width: 100%;
-  height: 100px;
+  width: 50vw;
 }
 
