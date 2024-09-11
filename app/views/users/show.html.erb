@@ -46,15 +46,13 @@
 <%= link_to travel_path(trip) do %>
   <p>旅行名: <%= trip.travel_name %></p>
   <p>出発日: <%= trip.start_date.strftime("%Y年%-m月%-d日") %> ～ 終了日: <%= trip.end_date.strftime("%Y年%-m月%-d日") %></p>
-  <h3>スケジュール</h3>
-  <% trip.schedules.each do |schedule| %>
-    <p>日付: <%= schedule.date %></p>
-    <h4>アクティビティ</h4>
-    <% schedule.activities.each do |activity| %>
-      <p>場所: <%= activity.location %></p>
-      <p>説明: <%= activity.description %></p>
-      <p>開始時間: <%= activity.start_time.strftime("%H時%M分") %> ～ 終了時間: <%= activity.end_time.strftime("%H時%M分") %></p>
-    <% end %>
-  <% end %>
+<% trip.schedules.each do |schedule| %>
+  <p>日付: <%= schedule.date %></p>
+<% schedule.activities.each do |activity| %>
+  <p>場所: <%= activity.location %></p>
+  <p>説明: <%= activity.description %></p>
+  <p>開始時間: <%= activity.start_time.strftime("%H時%M分") %> ～ 終了時間: <%= activity.end_time.strftime("%H時%M分") %></p>
+<% end %>
+<% end %>
 <% end %>
 <% end %>
