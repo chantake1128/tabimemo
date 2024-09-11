@@ -40,8 +40,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_09_083559) do
   end
 
   create_table "activities", charset: "utf8", force: :cascade do |t|
-    t.integer "start_time", null: false
-    t.integer "end_time", null: false
+    t.datetime "start_time", null: false
+    t.datetime "end_time", null: false
     t.string "location", null: false
     t.string "description"
     t.bigint "trip_id", null: false

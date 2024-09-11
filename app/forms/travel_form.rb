@@ -27,7 +27,7 @@ class TravelForm
         date: date,
         trip_id: @trip.id
       )
-      @activitie = Activitie.create!(
+      @activity = Activity.create!(
         start_time: start_time,
         end_time: end_time,
         location: location,
