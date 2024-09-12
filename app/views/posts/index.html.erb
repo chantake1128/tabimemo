@@ -49,7 +49,7 @@
         <% @trips.each do |trip| %>
         <div class="travel-plan">
           <p>旅行名：<%= trip.travel_name %></p>
-          <p><%= trip.start_date.strftime("%-m月%-d日") %>～<%= trip.end_date.strftime("%-m月%-d日") %></p>
+          <p><%= trip.start_date %>～<%= trip.end_date %></p>
         </div>
         <% end %>
       <% else %>
