@@ -35,6 +35,7 @@ https://tabimemo.onrender.com
 いいねが登録されている場合「いいね済」と表示される
 「いいね済」をクリックすると削除できる
 ※JavaScriptの実装中（現在はロードが入る）
+![2024-09-20 12-35-40](https://github.com/user-attachments/assets/7b4b3ccf-5f1e-4785-a7db-cda1f0d2883a)
 
 # 機能一覧
 | 機能                  | ログインユーザー | 非ログインユーザー |
