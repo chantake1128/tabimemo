@@ -70,6 +70,13 @@ class TravelsController < ApplicationController
   def destroy
   end
 
+  def show
+    @trip = Trip.find(params[:id])           # Tripの取得
+    @user = @trip.user                       # Tripから関連するUserを取得
+    @posts = @user.posts                     # UserのPostsを取得
+    @trips = @user.trips.includes(schedules: :activities)  # Userの関連するTripsとその内部情報を取得
+  end
+
   private
 
   def travel_form_params
