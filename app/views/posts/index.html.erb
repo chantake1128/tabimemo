@@ -47,10 +47,12 @@
       <h2 class="post-top-title">旅のしおり</h2>
       <% if @trips.any? %>
         <% @trips.each do |trip| %>
-        <div class="travel-plan">
-          <p>旅行名：<%= trip.travel_name %></p>
-          <p><%= trip.start_date %>～<%= trip.end_date %></p>
-        </div>
+          <%= link_to travel_path(trip) do %>
+            <div class="travel-plan">
+              <p>旅行名：<%= trip.travel_name %></p>
+              <p><%= trip.start_date %>～<%= trip.end_date %></p>
+            </div>
+          <% end %>
         <% end %>
       <% else %>
         <p>No trips found for the selected prefecture_id.</p>

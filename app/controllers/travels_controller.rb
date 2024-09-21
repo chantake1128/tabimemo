@@ -71,10 +71,8 @@ class TravelsController < ApplicationController
   end
 
   def show
-    @trip = Trip.find(params[:id])           # Tripの取得
-    @user = @trip.user                       # Tripから関連するUserを取得
-    @posts = @user.posts                     # UserのPostsを取得
-    @trips = @user.trips.includes(schedules: :activities)  # Userの関連するTripsとその内部情報を取得
+    @trip = Trip.find(params[:id])
+    @schedules = @trip.schedules.includes(:activities)
   end
 
   private
