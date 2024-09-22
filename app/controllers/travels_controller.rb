@@ -62,12 +62,17 @@ class TravelsController < ApplicationController
   end
 
   def edit
+    @travel_form = TravelForm.find(params[:id])
+    @additional_fields = @travel_form.additional_fields
   end
 
   def update
-  end
-
-  def destroy
+    @travel_form = TravelForm.new(travel_form_params)
+    if @travel_form.save
+      redirect_to @travel_form, notice: 'Travel information was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def show
