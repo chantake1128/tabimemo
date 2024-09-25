@@ -5,42 +5,34 @@ body {
 }
 
 .posts-main {
-  width: 100%;
-  max-width: 800px; /* フォームの最大幅を設定 */
-  margin: 30px auto; /* 中央揃え */
+  max-width: 600px;
+  margin: 30px auto;
   padding: 20px;
-  background-color: #f6f8fa; /* 背景色 */
-  border-radius: 10px; /* 角を丸くする */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .posts-title {
   font-size: 24px;
-  color: #333;
-  font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
 }
 
-/* 画像アップロードのスタイル */
-.img-upload {
-  margin-bottom: 20px;
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px dashed #ccc;
-  text-align: center;
-}
-
+/* 項目のラベルと必須アイコン */
 .weight-bold-text {
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333;
 }
 
 .indispensable {
-  color: #ff0000; /* 赤色に設定して必須であることを強調 */
+  color: #ff0000;
   margin-left: 5px;
+}
+
+/* 画像アップロードセクション */
+.img-upload {
+  margin-bottom: 20px;
 }
 
 .click-upload {
@@ -51,9 +43,9 @@ body {
   cursor: pointer;
 }
 
-.click-upload p {
-  margin-top: 10px;
-  color: #777;
+img-upload p {
+  margin: 0;
+  color: #666;
 }
 
 /* セレクトボックス */
@@ -65,44 +57,58 @@ body {
   border-radius: 5px;
 }
 
-/* テキストエリアのスタイル */
+/* テキストエリア */
 .posts-text {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
+}
+
+/* フォームのボタン */
+.posts-form-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.posts-form-submit:hover {
+  background-color: #0056b3;
+}
+
+/* ボタンのコンテンツエリア */
+.btn-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 /* ボタンのスタイル */
-.sell-btn-contents {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.post-btn, .back-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #fff;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
 .post-btn {
-  background-color: #4caf50; /* 緑色 */
+  flex: 1; /* ボタンが均等に広がる */
+  margin: 0 10px; /* ボタン間の間隔 */
+  padding: 15px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none; /* リンクのアンダーラインを削除 */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* ホバー時のトランジション */
 }
 
+/* ホバー時のボタンスタイル */
 .post-btn:hover {
-  background-color: #388e3c; /* ダークグリーン */
-}
-
-.back-btn {
-  background-color: #ff5722; /* 赤色 */
-}
-
-.back-btn:hover {
-  background-color: #e64a19; /* ダークレッド */
+  background-color: #0056b3;
 }

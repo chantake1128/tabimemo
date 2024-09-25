@@ -19,9 +19,9 @@
             <div class="post-content">
               <div class="post-content-main">
                 <div class="post-content-top">
-                  <div class="post-status"><%= Status.find(post.status_id).name %></div>
+                  <div class="post-status"><%= Status.find(post.status_id).name %>/</div>
                   <div class="post-score">おすすめ度：<%= Score.find(post.score_id).name %></div>
-                  <div class="post-category"><%= Category.find(post.category_id).name %></div>
+                  <div class="post-category">/<%= Category.find(post.category_id).name %></div>
                 </div>
                 <div class="post-title"><%= post.title %></div>
               </div>
