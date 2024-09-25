@@ -1,0 +1,73 @@
+/* フォーム入力 */
+.form-text-wrap {
+  margin-bottom: 20px;
+
+}
+
+.form-text-wrap label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.field {
+  margin-top: 5px;
+}
+
+.input-field,
+.text-area-field,
+.select-box {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.text-area-field {
+  height: 100px;
+}
+
+.indispensable {
+  color: #ff0000;
+}
+
+/* ボタン */
+.keep-btn button,
+.posts-form-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff4b4b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.keep-btn button:hover,
+.posts-form-submit:hover {
+  background-color: #ff2020;
+}
+
+/* 予定を追加するボタン */
+#add-field-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-field-button:hover {
+  background-color: #0056b3;
+}

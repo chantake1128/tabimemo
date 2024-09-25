@@ -3,6 +3,10 @@ a {
   color: inherit; /* 青色を削除し、親要素の色を継承する */
 }
 
+.top-title {
+  font-size: 50px;
+  text-align: center;
+}
 .main-body {
   display: flex; /* 横並びにする */
   justify-content: space-between;
