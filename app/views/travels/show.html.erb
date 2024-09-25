@@ -4,21 +4,27 @@
   <div class="travel-box">
     <p>旅行名: <%= @trip.travel_name %></p>
     <p>出発日: <%= @trip.start_date %> ～ 終了日: <%= @trip.end_date %></p>
+  </div>
+  <% @schedules.each do |schedule| %>
+    <div class="schedule">
+      <h2>日程: <%= schedule.date %></h2>
+    </div>
 
-    <% @schedules.each do |schedule| %>
-      <p>日付: <%= schedule.date %></p>
-
+    <% if schedule.activities.exists? %>
       <% schedule.activities.each do |activity| %>
-        <p>場所: <%= activity.location %></p>
-        <p>説明: <%= activity.description %></p>
-        <p>開始時間: <%= activity.start_time %> ～ 終了時間: <%= activity.end_time %></p>
+        <div class="activity">
+          <p>開始時間: <%= activity.start_time %>~終了時間: <%= activity.end_time %></p>
+          <p>場所: <%= activity.location %></p>
+          <p>やること: <%= activity.description %></p>
+        </div>
       <% end %>
     <% end %>
+  <% end %>
 
-    <div class="action-buttons">
-      <%= link_to '戻る', request.referrer, class: "back-btn"  %>
-      <%= link_to "編集する", edit_travel_path(@trip), class: "travel-red-btn" %>
-      <%= link_to "削除", travel_path(@trip), data: { turbo_method: :delete }, class: "travel-destroy" %>
-    </div>
+
+  <div class="action-buttons">
+    <%= link_to '戻る', request.referrer, class: "travel-btn"  %>
+    <%= link_to "編集する", edit_travel_path(@trip), class: "travel-btn" %>
+    <%= link_to "削除", travel_path(@trip), data: { turbo_method: :delete }, class: "travel-btn" %>
   </div>
 </div>

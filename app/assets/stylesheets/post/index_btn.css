@@ -5,6 +5,7 @@
   background: #FFFFFF;
   text-align: center;
   border-radius: 4%;
+  border: 1px solid black;
   bottom: 32px;
   right: 312px;
   position: fixed;
@@ -35,6 +36,7 @@
   background: #FFFFFF;
   text-align: center;
   border-radius: 4%;
+  border: 1px solid black;
   bottom: 32px;
   right: 32px;
   position: fixed;
@@ -65,6 +67,7 @@
   background: #FFFFFF;
   text-align: center;
   border-radius: 4%;
+  border: 1px solid black;
   bottom: 32px;
   right: 172px;
   position: fixed;
