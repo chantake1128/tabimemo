@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.posts-main {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.posts-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 項目のラベルと必須アイコン */
+.weight-bold-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.indispensable {
+  color: #ff0000;
+  margin-left: 5px;
+}
+
+/* 画像アップロードセクション */
+.img-upload {
+  margin-bottom: 20px;
+}
+
+.click-upload {
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+img-upload p {
+  margin: 0;
+  color: #666;
+}
+
+/* セレクトボックス */
+.select-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* テキストエリア */
+.posts-text {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* フォームのボタン */
+.posts-form-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.posts-form-submit:hover {
+  background-color: #0056b3;
+}
+
+/* ボタンのコンテンツエリア */
+.btn-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* ボタンのスタイル */
+.post-btn {
+  flex: 1; /* ボタンが均等に広がる */
+  margin: 0 10px; /* ボタン間の間隔 */
+  padding: 15px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none; /* リンクのアンダーラインを削除 */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* ホバー時のトランジション */
+}
+
+/* ホバー時のボタンスタイル */
+.post-btn:hover {
+  background-color: #0056b3;
+}
