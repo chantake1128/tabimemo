@@ -1,43 +1,75 @@
-* {
-  box-sizing: border-box;
-}
+/* ヘッダーの全体スタイル */
 .top-page-header {
-  background-color: aqua;
+  background-color: #283e4a; /* 背景色を変更 */
+  color: #ffffff; /* 文字色を白にする */
+  display: flex; /* フレックスボックスでコンテンツを整列 */
+  justify-content: space-between; /* 両端にスペースを広げる */
+  align-items: center; /* 中央揃えにする */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
+}
+
+/* 左側のロゴ部分 */
+.search-bar-contents {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 5vw;
 }
 
 .top-icon {
-  font-size: 50px;
-  text-decoration: none;
-  color: black;
+  font-size: 24px; /* 文字サイズを大きくする */
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none; /* 下線を消す */
 }
 
+.top-icon:hover {
+  color: #f9a825; /* マウスオーバー時の色変更 */
+}
+
+/* ナビゲーションリスト */
 .lists {
+  list-style: none; /* 点を除去 */
   display: flex;
-
+  gap: 20px; /* リスト項目の間隔 */
+  margin: 0; /* マージンをリセット */
+  padding: 0; /* パディングをリセット */
 }
 
+.lists li {
+  list-style: none;
+}
+
+/* リスト内のリンクのスタイル */
+.lists li a {
+  color: #ffffff; /* 文字色を白にする */
+  text-decoration: none; /* 下線を消す */
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* 背景色のトランジション */
+}
+
+.lists li a:hover {
+  background-color: #f9a825; /* マウスオーバー時の背景色変更 */
+}
+
+/* 特定のリンクのスタイル */
 .user-nickname {
-  text-decoration: none;
-  color: black;
-  margin-right: 3vw;
+  font-weight: bold; /* ニックネームを太字にする */
 }
 
 .logout {
-  text-decoration: none;
-  color: black;
+  background-color: #ff5722; /* ログアウトボタンの背景色 */
 }
 
-.login {
-  text-decoration: none;
-  color: black;
-  margin-right: 3vw;
+.logout:hover {
+  background-color: #e64a19; /* ログアウトボタンのマウスオーバー時の背景色 */
 }
 
-.sign-up {
-  text-decoration: none;
-  color: black;
+.login, .sign-up {
+  background-color: #4caf50; /* ログインと新規登録ボタンの背景色 */
+}
+
+.login:hover, .sign-up:hover {
+  background-color: #388e3c; /* ログインと新規登録ボタンのマウスオーバー時の背景色 */
 }

@@ -1,0 +1,79 @@
+/* 全体レイアウト */
+.post-show {
+  display: flex;
+  justify-content: center; /* コンテンツを中央揃え */
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* 背景色の設定 */
+}
+
+/* 投稿ボックスのスタイル */
+.post-box {
+  background-color: #ffffff; /* 背景色を白に */
+  border-radius: 10px; /* 角を丸くする */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
+  max-width: 600px; /* 最大幅を設定 */
+  width: 100%; /* 幅を全体に広げる */
+}
+
+/* 画像コンテナのスタイル */
+.post-img-content {
+  text-align: center; /* 画像を中央揃え */
+  margin-bottom: 20px;
+}
+
+/* 投稿画像のスタイル */
+.post-img {
+  max-width: 100%; /* 画像をコンテナ内に収める */
+  border-radius: 10px; /* 角を丸くする */
+}
+
+/* タイトル、本文のスタイル */
+.post-box-title, .post-box-body, .post-box-status, .post-box-category, .post-box-score {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.post-box-title {
+  font-weight: bold; /* タイトルを太字にする */
+  font-size: 24px; /* フォントサイズを大きく */
+  margin-bottom: 10px;
+}
+
+/* リンクボタンのスタイル */
+.back-btn, .post-red-btn, .post-destroy {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 5px; /* 角を丸くする */
+  text-decoration: none;
+  color: #ffffff; /* 文字色を白に */
+  text-align: center;
+  transition: background-color 0.3s ease; /* 背景色のトランジション */
+}
+
+/* 各ボタンの色設定 */
+.back-btn {
+  background-color: #4caf50; /* 緑色 */
+}
+
+.back-btn:hover {
+  background-color: #388e3c; /* ダークグリーン */
+}
+
+.post-red-btn {
+  background-color: #f9a825; /* 黄色 */
+}
+
+.post-red-btn:hover {
+  background-color: #f57f17; /* ダークイエロー */
+}
+
+.post-destroy {
+  background-color: #e53935; /* 赤色 */
+}
+
+.post-destroy:hover {
+  background-color: #c62828; /* ダークレッド */
+}
