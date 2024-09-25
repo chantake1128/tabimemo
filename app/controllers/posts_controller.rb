@@ -5,10 +5,10 @@ class PostsController < ApplicationController
 
   def index
     landmark_ids = Landmark.where(prefecture_id: params[:prefecture_id]).pluck(:id)
-    @posts = Post.includes(:landmark).where(landmark_id: landmark_ids).limit(5)
+    @posts = Post.includes(:landmark).where(landmark_id: landmark_ids)
     @prefecture = Prefecture.find(params[:prefecture_id])
     #旅のしおり機能のため
-    @trips = Trip.where(prefecture_id: params[:prefecture_id]).limit(10)
+    @trips = Trip.where(prefecture_id: params[:prefecture_id])
     #/旅のしおり機能のため
     if landmark_ids.any?
       @landmark = Landmark.find(landmark_ids.first)
