@@ -2,15 +2,29 @@
 
 <div class="travel-show">
   <div class="travel-box">
-    <div class="travel-box-title">    <%= @travel.title %></div>
-    <div class="travel-box-body">     <%= @travel.body %></div>
-    <div class="travel-box-status">   <%= Status.find(@travel.status_id).name %></div>
-    <div class="travel-box-category"> <%= Category.find(@travel.category_id).name %></div>
-    <div class="travel-box-score">    <%= Score.find(@travel.score_id).name %></div>
-    <%= link_to "/travels", class: "back-btn" do %>
-      <div>戻る</div>
+    <p>旅行名: <%= @trip.travel_name %></p>
+    <p>出発日: <%= @trip.start_date %> ～ 終了日: <%= @trip.end_date %></p>
+  </div>
+  <% @schedules.each do |schedule| %>
+    <div class="schedule">
+      <h2>日程: <%= schedule.date %></h2>
+    </div>
+
+    <% if schedule.activities.exists? %>
+      <% schedule.activities.each do |activity| %>
+        <div class="activity">
+          <p>開始時間: <%= activity.start_time %>~終了時間: <%= activity.end_time %></p>
+          <p>場所: <%= activity.location %></p>
+          <p>やること: <%= activity.description %></p>
+        </div>
+      <% end %>
     <% end %>
-    <%= link_to "編集する", edit_travel_path(@travel), class: "travel-red-btn" %>
-    <%= link_to "削除", travel_path(@travel), data: { turbo_method: :delete }, class: "travel-destroy" %>
+  <% end %>
+
+
+  <div class="action-buttons">
+    <%= link_to '戻る', request.referrer, class: "travel-btn"  %>
+    <%= link_to "編集する", edit_travel_path(@trip), class: "travel-btn" %>
+    <%= link_to "削除", travel_path(@trip), data: { turbo_method: :delete }, class: "travel-btn" %>
   </div>
 </div>

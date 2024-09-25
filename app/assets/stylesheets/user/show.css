@@ -1,0 +1,9 @@
+/**旅行情報はpost/indexと同じ**/
+.travel-main-body {
+    background-color: white;
+    width: 45vw;
+    border-radius: 10px;
+    margin: 10px auto 5px auto;
+    cursor: pointer;
+    overflow: hidden;
+}

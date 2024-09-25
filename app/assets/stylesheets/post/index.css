@@ -112,4 +112,26 @@
 .travel-plan {
   border-bottom: 1px solid #e0e0e0;
   padding: 10px 0;
+  float: right;
+}
+
+/**右側（旅のしおり）**/
+.right-body {
+  background-color: lightgreen;
+  width: 50vw;
+}
+
+.travel-top-title {
+  text-align: center;
+  font-size: 25px;
+  background-color: aquamarine;
+  border: 1px solid black;
+}
+
+.travel-plan {
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  margin: 5px;
+  padding: 10px;
 }

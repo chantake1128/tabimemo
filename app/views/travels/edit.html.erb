@@ -1,1 +1,86 @@
 <%= render "shared/second-header" %>
+
+<% if @travel_form.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@travel_form.errors.count, "error") %> prohibited this travel from being saved:</h2>
+    <ul>
+    <% @travel_form.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with model: @travel_form, url: travels_path, local: true do |f| %>
+  <!-- 旅行の基本情報入力 -->
+  <div class="form-text-wrap">
+    <label class="form-text">旅行名</label><span class="indispensable">必須</span>
+    <div class="field">
+      <%= f.text_field :travel_name, id: "travel-code", placeholder: "題名", maxlength: "100" %>
+    </div>
+  </div>
+
+  <div class="form-text-wrap">
+    <label class="form-text">都道府県名</label><span class="indispensable">必須</span>
+    <div class="field">
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class: "select-box", id: "prefecture"}) %>
+    </div>
+  </div>
+
+  <div class="form-text-wrap">
+    <label class="form-text">出発日</label><span class="indispensable">必須</span>
+    <div class="field">
+      <%= f.date_field :start_date, id: "travel-code", placeholder: "出発日" %>
+    </div>
+  </div>
+
+  <div class="form-text-wrap">
+    <label class="form-text">帰宅日</label><span class="indispensable">必須</span>
+    <div class="field">
+      <%= f.date_field :end_date, id: "travel-code", placeholder: "帰宅日" %>
+    </div>
+  </div>
+
+  <!-- 予定の入力フォーム -->
+  <div id="form-segment">
+    <div class="form-text-wrap">
+      <label class="form-text">日にち</label><span class="indispensable">必須</span>
+      <div class="field">
+        <%= f.date_field :original_date, id: "travel-code", placeholder: "10月10日" %>
+      </div>
+    </div>
+
+    <div class="form-text-wrap">
+      <label class="form-text">開始時間</label><span class="indispensable">必須</span>
+      <div class="field">
+        <%= f.time_field :original_start_time, id: "travel-code", placeholder: "10:00" %>
+      </div>
+    </div>
+
+    <div class="form-text-wrap">
+      <label class="form-text">終了時間</label><span class="indispensable">必須</span>
+      <div class="field">
+        <%= f.time_field :original_end_time, id: "travel-code", placeholder: "11:00" %>
+      </div>
+    </div>
+
+    <div class="form-text-wrap">
+      <label class="form-text">場所</label><span class="indispensable">必須</span>
+      <div class="field">
+        <%= f.text_field :original_location, id: "travel-code", placeholder: "厳島神社" %>
+      </div>
+    </div>
+
+    <div class="form-text-wrap">
+      <label class="form-text">やること</label><span class="indispensable">必須</span>
+      <div class="field">
+        <%= f.text_area :original_description, id: "travel-code", placeholder: "○○で遊ぶ" %>
+      </div>
+    </div>
+  </div>
+
+  <!-- 保存ボタン -->
+  <div class="keep-btn">
+    <%= f.submit "保存する", class: "keep-red-btn", id: "button" %>
+  </div>
+<% end %>
