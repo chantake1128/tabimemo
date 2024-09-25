@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.landmarks-main {
+  width: 80%;
+  margin: 2em auto;
+  background-color: #fff;
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.landmarks-title {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #555;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-upload {
+  margin-bottom: 1.5em;
+}
+
+.img-upload .weight-bold-text {
+  margin-bottom: 0.5em;
+}
+
+.click-upload {
+  border: 2px dashed #ccc;
+  padding: 1.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.click-upload:hover {
+  background-color: #eee;
+}
+
+.landmarks-text {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.select-box {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button Styles */
+.btn-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.landmark-new-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.landmark-btn:hover {
+  background-color: #0056b3;
+}
+
+.back-btn {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}

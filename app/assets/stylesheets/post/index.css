@@ -1,4 +1,8 @@
-/* 全体のコンテナ */
+a {
+  text-decoration: none; /* 下線をなくす */
+  color: inherit; /* 青色を削除し、親要素の色を継承する */
+}
+
 .main-body {
   display: flex; /* 横並びにする */
   justify-content: space-between;
@@ -46,6 +50,13 @@
 .post-img-content {
   flex: 1;
   margin-right: 15px;
+}
+
+.post-img {
+  width: 150px; 
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .post-content {
@@ -108,4 +119,5 @@
 .travel-plan {
   border-bottom: 1px solid #e0e0e0;
   padding: 10px 0;
+
 }
