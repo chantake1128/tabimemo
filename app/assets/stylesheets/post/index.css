@@ -1,109 +1,115 @@
-a {
-  text-decoration: none;
-  color: black;
-}
-
+/* 全体のコンテナ */
 .top-title {
-  text-align: center;
   font-size: 50px;
-  font-weight: bold;
+  text-align: center;
 }
 .main-body {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  background-color: lightgray;
+  display: flex; /* 横並びにする */
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
-/**左側（旅行情報）**/
+/* 左側のコンテンツエリア */
 .left-body {
-  width: 50VW;
-  background-color: lightgray;
+  flex: 2;
+  margin-right: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 右側のコンテンツエリア */
+.right-body {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 見出し */
 .post-top-title {
-  text-align: center;
-  font-size: 25px;
-  background-color: aquamarine;
-  border: 1px solid black;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333333;
 }
 
+/* ポストのスタイル */
 .post {
-  background-color: white;
-  height: 200px;
-  width: 45vw;
-  border-radius: 10px;
-  margin: 10px auto 5px auto;
-  cursor: pointer;
-  overflow: hidden;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
 }
-/**上半分（主題＋写真）**/
+
 .post-top {
   display: flex;
-  height: 100px;
-  width: 100%;
 }
 
 .post-img-content {
-  height: 100%;
-  width: 100px;
-  flex-shrink: 0;
-}
-
-.post-img {
-  object-fit: cover; 
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
+  flex: 1;
+  margin-right: 15px;
 }
 
 .post-content {
-  height: 100px;
-  width: 100%;
-  border-radius: 0 10px 0 0;
+  flex: 3;
+}
+
+.post-content-main {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .post-content-top {
-  display: flex;
-  justify-content: flex-start;
+
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.post-category, .post-status, .post-score {
-  font-size: 15px;
+.post-status,
+.post-score,
+.post-category {
+  font-size: 14px;
+  color: #666666;
 }
 
 .post-title {
-  text-align: center;
-  line-height: 50px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  white-space: nowrap;
-  overflow-x: auto;
 }
 
 .post-body {
-  font-weight: bold;
-  overflow-x: auto;
-  height: 50px;
-  max-height: 50px;  
+  margin: 10px 0;
+}
+
+/* ポストの追加情報 */
+.post-content-info {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .post-content-info-sub {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666666;
 }
 
 .post-user-nickname {
-  margin-right: 20px;
+  font-weight: bold;
 }
 
 .post-created-at {
-  float: right;
+  font-style: italic;
+  color: #999999;
 }
 
-/**右側（旅のしおり）**/
-.right-body {
-  background-color: green;
-  width: 50vw;
+/* 旅のしおりのスタイル */
+.travel-plan {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
 }
-

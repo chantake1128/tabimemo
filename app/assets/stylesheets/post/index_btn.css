@@ -1,10 +1,11 @@
 /**観光地登録ボタン**/
 .landmark-btn {
-  height: 120px;
-  width: 120px;
-  background: #FFFFFF;
+  height: 100px;
+  width: 100px;
+  background: rgb(230, 225, 225);
   text-align: center;
   border-radius: 4%;
+  border: 1px solid #000;
   bottom: 32px;
   right: 312px;
   position: fixed;
@@ -25,16 +26,17 @@
   height: 100px;
   width: 100px;
   position: fixed;
-  bottom: 60px;
+  bottom: 70px;
   right: 320px;
 }
 /**情報投稿ボタン**/
 .new-btn {
-  height: 120px;
-  width: 120px;
-  background: #FFFFFF;
+  height: 100px;
+  width: 100px;
+  background: rgb(230, 225, 225);
   text-align: center;
   border-radius: 4%;
+  border: 1px solid #000;
   bottom: 32px;
   right: 32px;
   position: fixed;
@@ -48,23 +50,24 @@
   margin-bottom: 5px;
   position: fixed;
   bottom: 30px;
-  right: 55px;
+  right: 60px;
 }
 
 .new-btn-icon {
   height: 100px;
   width: 100px;
   position: fixed;
-  bottom: 60px;
-  right: 40px;
+  bottom: 70px;
+  right: 50px;
 }
 /**旅のしおり(旅行計画)**/
 .plan-btn {
-  height: 120px;
-  width: 120px;
-  background: #FFFFFF;
+  height: 100px;
+  width: 100px;
+  background: rgb(230, 225, 225);
   text-align: center;
   border-radius: 4%;
+  border: 1px solid #000;
   bottom: 32px;
   right: 172px;
   position: fixed;
@@ -78,13 +81,13 @@
   margin-bottom: 5px;
   position: fixed;
   bottom: 30px;
-  right: 185px;
+  right: 190px;
 }
 
 .plan-btn-icon {
   height: 60px;
   width: 60px;
   position: fixed;
-  bottom: 85px;
-  right: 200px;
+  bottom: 95px;
+  right: 210px;
 }

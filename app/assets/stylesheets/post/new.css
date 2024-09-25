@@ -1,0 +1,94 @@
+/* 全体のレイアウト */
+.posts-main {
+  width: 100%;
+  max-width: 800px; /* フォームの最大幅を設定 */
+  margin: 0 auto; /* 中央揃え */
+  padding: 20px;
+  background-color: #f6f8fa; /* 背景色 */
+  border-radius: 10px; /* 角を丸くする */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
+}
+
+/* タイトルのスタイル */
+.posts-title {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* 画像アップロードのスタイル */
+.img-upload {
+  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px dashed #ccc;
+  text-align: center;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.indispensable {
+  color: #ff0000; /* 赤色に設定して必須であることを強調 */
+}
+
+.click-upload p {
+  margin-top: 10px;
+  color: #777;
+}
+
+/* セレクトボックスのスタイル */
+.select-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* テキストエリアのスタイル */
+.posts-text {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ボタンのスタイル */
+.sell-btn-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-btn, .back-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.post-btn {
+  background-color: #4caf50; /* 緑色 */
+}
+
+.post-btn:hover {
+  background-color: #388e3c; /* ダークグリーン */
+}
+
+.back-btn {
+  background-color: #ff5722; /* 赤色 */
+}
+
+.back-btn:hover {
+  background-color: #e64a19; /* ダークレッド */
+}
